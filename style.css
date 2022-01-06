@@ -1,0 +1,449 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    user-select: none;
+}
+
+:root {
+    --Orange: hsl(26, 100%, 55%);
+    --Pale-orange: hsl(25, 100%, 94%);
+    --Very-vark-blue: hsl(220, 13%, 13%);
+    --Dark-grayish-blue: hsl(219, 9%, 45%);
+    --Dark-grayish-blue: hsl(219, 9%, 45%);
+    --Grayish-blue: hsl(220, 14%, 75%);
+    --Light-grayish-blue: hsl(223, 64%, 98%);
+    --White: hsl(0, 0%, 100%);
+    --black: rgba(0, 0, 0, 0.514);
+}
+
+body {
+    min-width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Kumbh Sans", sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.main-content {
+    width: 80vw;
+    position: relative;
+}
+
+.main-content > header {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--black);
+    align-items: center;
+    flex: auto auto auto;
+    gap: 40px;
+    height: 7rem;
+}
+
+.main-content > header > .menu {
+    margin-right: auto;
+    opacity: 0.7;
+    text-decoration: none;
+}
+
+.main-content > header > .menu > a {
+    text-decoration: none;
+    margin: 0.5rem;
+    background-image: linear-gradient(to left, var(--Orange), var(--Orange));
+    background-size: 0% 4%;
+    background-repeat: no-repeat;
+    background-position: -100% 99%;
+    padding-block: 2.9rem;
+    transition: background-size 300ms ease;
+    color: var(--Dark-grayish-blue);
+}
+
+.main-content > header > .menu > a:hover {
+    background-size: 100% 4%;
+    color: black;
+    font-size: 1.01rem;
+}
+
+.main-content > header > .personal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.main-content > header > .personal > :first-child {
+    position: relative;
+}
+
+.info {
+    font-size: 0.75rem;
+    border-radius: 0.4rem;
+    background-color: var(--Orange);
+    color: white;
+    position: absolute;
+    padding-inline: 0.45rem;
+    left: 47%;
+    top: -82%;
+}
+
+.personal > .cart > .list:hover {
+    display: block;
+}
+
+.personal > .cart > .list {
+    width: 24rem;
+    height: 29rem;
+    background-color: white;
+    position: absolute;
+    left: -816%;
+    top: 287%;
+    padding: 1rem;
+    font-size: 1.25rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 5px 0.1px var(--Dark-grayish-blue),
+        0 0 5px 0.1px var(--Dark-grayish-blue) inset;
+    background-image: linear-gradient(
+        var(--Grayish-blue),
+        var(--Dark-grayish-blue)
+    );
+    background-size: 100% 0.5%;
+    background-repeat: no-repeat;
+    background-position: 0 10%;
+    font-weight: 700;
+}
+
+.personal > .cart > .list > .else {
+    position: absolute;
+    left: 23%;
+    top: 50%;
+    color: var(--Grayish-blue);
+    font-size: 1.5rem;
+}
+
+.disc {
+    margin: 2.5rem 0.25rem;
+    display: grid;
+    grid-template-columns: 3rem 1fr 2rem;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas:
+        "a b c"
+        "a d c";
+}
+
+.disc > img {
+    grid-area: a;
+    width: 4.5rem;
+    height: 4.5rem;
+    border-radius: 0.5rem;
+    justify-self: center;
+    align-self: center;
+}
+
+.disc > button {
+    grid-area: c;
+    text-decoration: none;
+    border: none;
+    background: url(./ecommerce-product-page-main/images/icon-delete.svg)
+        no-repeat border-box;
+    justify-self: center;
+    align-self: center;
+    width: 1rem;
+    height: 1rem;
+    cursor: pointer;
+}
+
+.disc > p:last-of-type,
+.disc > p:first-of-type {
+    font-size: 1.1rem;
+    margin-block: 0rem;
+    align-self: center;
+    color: var(--Grayish-blue);
+    margin-left: 1.5rem;
+}
+
+.disc > p:first-of-type {
+    grid-area: b;
+    justify-self: center;
+}
+
+.disc > p:last-of-type {
+    grid-area: d;
+}
+
+.list > button {
+    width: 95%;
+    height: 3rem;
+    margin-inline: 2.5%;
+    font-weight: 700;
+    color: var(--White);
+    background-color: var(--Orange);
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+.cart > :first-child:hover {
+    cursor: pointer;
+}
+
+.main-content > header > .personal > :last-child {
+    width: 3rem;
+}
+
+.main-content > header > .personal > :last-child:hover {
+    filter: contrast(0.5) brightness(1.5);
+    border: var(--Orange) 4px solid;
+    background-color: var(--Orange);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 9rem;
+    margin-top: 6rem;
+    margin-inline: 3rem;
+}
+
+main > section > img {
+    width: 100%;
+    border-radius: 2rem;
+    cursor: pointer;
+}
+
+.menu-img {
+    margin-block: 2.5rem;
+    display: flex;
+}
+
+.menu-img > img {
+    border-radius: 1rem;
+    width: 6rem;
+    margin-inline: 1rem;
+    padding: 0;
+    cursor: pointer;
+    position: relative;
+}
+
+.menu-img > img:hover {
+    filter: contrast(0.5) brightness(1.5);
+}
+
+.clicked {
+    filter: contrast(50%) brightness(1.5);
+    border: var(--Orange) 4px solid;
+    background-color: var(--Orange);
+}
+
+main > section > h3 {
+    font-size: 1rem;
+    color: var(--Orange);
+}
+
+section > h2 {
+    font-size: 3rem;
+    line-height: 3.25rem;
+}
+
+section > p {
+    color: var(--Dark-grayish-blue);
+}
+
+.price {
+    display: grid;
+    grid-template-columns: repeat(2, 9rem);
+    grid-template-rows: repeat(2, 2.25rem);
+    grid-template-areas:
+        "a b"
+        "c .";
+    justify-items: start;
+    align-items: center;
+    margin-block: 3rem;
+}
+.price > :first-child {
+    font-size: 2rem;
+    grid-area: a;
+}
+.price > :nth-child(2) {
+    grid-area: c;
+    color: var(--Grayish-blue);
+    font-size: 1.25rem;
+    text-decoration-line: line-through;
+}
+
+.price > p {
+    background-color: var(--Pale-orange);
+    color: var(--Orange);
+    font-weight: 700;
+    padding-inline: 1rem;
+    padding-block: 0.25rem;
+    border-radius: 0.25rem;
+}
+
+.buy {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.num {
+    display: flex;
+    background-color: var(--Light-grayish-blue);
+    width: 10rem;
+    height: 3rem;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    font-weight: 700;
+}
+
+.num > :first-child {
+    padding: 1.25rem;
+    cursor: pointer;
+}
+
+.num > :first-child:hover {
+    filter: contrast(0.5) brightness(1.5);
+}
+
+.num > img:nth-last-child(1) {
+    padding: 1.25rem;
+    cursor: pointer;
+}
+
+.num > img:nth-last-child(1):hover {
+    filter: contrast(0.5) brightness(1.5);
+}
+
+.num > p {
+    padding-inline: 1.5rem;
+}
+
+.order {
+    display: flex;
+    gap: 1.5rem;
+    background-color: var(--Orange);
+    color: var(--White);
+    padding-inline: 5rem;
+    width: fit-content;
+    height: 4rem;
+    border-radius: 0.5rem;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.order:hover {
+    filter: contrast(0.5) brightness(1.5);
+}
+
+.order > h2 {
+    font-size: 1rem;
+    margin: 0;
+    width: 6rem;
+}
+
+.order > img {
+    aspect-ratio: 1 / 1;
+    height: 1.25rem;
+    filter: brightness(2);
+}
+
+.hide {
+    display: none !important;
+}
+
+.core {
+    display: grid;
+    place-items: center;
+    width: 32rem;
+    position: relative;
+}
+
+.lighthouse {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    right: 0%;
+    bottom: 0%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    justify-self: center;
+    align-self: center;
+    margin-inline: auto;
+    background-color: rgba(0, 0, 0, 0.95);
+    height: 130vh;
+    justify-content: center;
+}
+
+.close {
+    align-self: end;
+    width: 2rem;
+    left: 95%;
+    top: -10%;
+    transform: translate(-50%, -50%);
+    filter: brightness(2);
+    cursor: pointer;
+    position: absolute;
+}
+
+.main {
+    width: 100%;
+    margin: auto;
+    margin-block: 0;
+    border-radius: 2rem;
+    align-self: center;
+    justify-self: center;
+}
+
+.previous {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 50%;
+    position: absolute;
+    left: 0%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+
+.next {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 50%;
+    position: absolute;
+    left: 100%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+
+.menu {
+    display: flex;
+    margin-block: 2rem;
+}
+
+.menu > img {
+    width: 6rem;
+    border-radius: 1rem;
+    margin-inline: 1rem;
+    padding: 0;
+    cursor: pointer;
+}
+
+.menu > img:hover {
+    filter: contrast(0.5) brightness(1.5);
+}
+
+.next:hover,
+.previous:hover,
+.close:hover {
+    filter: grayscale(50%) brightness(100%) sepia(100%) hue-rotate(-30deg)
+        saturate(600%) contrast(1);
+}
